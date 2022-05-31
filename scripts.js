@@ -40,3 +40,11 @@ window.onload = () => {
     }
   });
 };
+
+// creating functionality to allow for dragging and dropping a file 
+let dropArea = document.getElementById('text')
+
+dropArea.addEventListener('dragenter', handlerFunction, false)
+dropArea.addEventListener('dragleave', handlerFunction, false)
+dropArea.addEventListener('dragover', handlerFunction, false)
+dropArea.addEventListener('drop', handlerFunction, false)

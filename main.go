@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	
+
 	// casting returned slice of bytes to string for readability
 	fmt.Println(string(readFile("test.py")))
 
@@ -32,7 +32,7 @@ func copyFile(s string) {
 	src := s
 	dst := "theCopy.py"
 
-	bytesRead, err := ioutil.ReadFile(src)
+	bytesRead, err := os.ReadFile(src)
 	errCheck(err)
 
 	err = ioutil.WriteFile(dst, bytesRead, 0644)
